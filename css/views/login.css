@@ -1,0 +1,17 @@
+@import "../layout.css";
+@import "../components.css";
+@import "../form.css";
+
+.container{
+    align-items: center;
+    justify-content: center;
+}
+.container .login{
+    min-width: 350px;
+}
+.login .bloco{
+    padding: 30px;
+    box-shadow: none;
+    margin-bottom: 20px;
+    background-color: white;
+}

@@ -1,0 +1,121 @@
+.form{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+}
+.form .item-form{
+    width: 100%;
+    margin-bottom: 15px;
+}
+.form .item-form .form-label{
+    font-weight: bold;
+    margin-bottom: 2px;
+}
+.form .item-form .form-input{
+    display: flex;
+    position: relative;
+}
+.form .item-form .form-input input{
+    flex: 1;
+    border: 0px;
+    height: 25px;
+    border-top-right-radius: 3px;
+    border-bottom: 1px solid #b9b9b9;
+}
+.form .item-form .form-input input:focus-visible{
+    outline: none;
+}
+.form .item-form .form-input-error{
+    top: 1px;
+    opacity: 0.9;
+    height: 20px;
+    display: none;
+    color: white;
+    padding: 5px 15px;
+    position: absolute;
+    border-radius: 5px;
+    white-space: nowrap;
+    left: calc(100% + 15px);
+    background-color: #404040;
+    box-shadow: 0 0 6px 0 black;
+}
+.form .item-form .form-input-error::after{
+    top: 8px;
+    left: -5px;
+    content: "";
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    transform: rotate(45deg);
+    border: 1px solid #404040;
+    background-color: #404040;
+}
+.form .item-form.warn .form-input-error::after,
+.form .item-form.warn .form-input-error{
+    background-color: #ff3e3e;
+}
+.form .item-form.warn .form-input input,
+.form .item-form.warn .form-input-error::after{
+    border-color: #ff3e3e;
+}
+.form .item-form.warn .form-input input{
+    background-color: #ffeaea;
+}
+.form .item-form.warn .form-input input::placeholder{
+    color: #ff3e3e;
+}
+.form .item-form.info .form-input-error,
+.form .item-form.warn .form-input-error{
+    display: flex;
+}
+.form .item-btn{
+    width: 100%;
+    display: flex;
+}
+.form .item-btn a,
+.form .item-btn button{
+    flex: 1;
+    height: 25px;
+    font-size: 14px;
+    cursor: pointer;
+    font-family: auto;
+    font-weight: bold;
+    border-radius: 3px;
+    border: 1px solid #d9d9d9;
+    background-color: #efefef;
+}
+.form .item-btn a{
+    display: flex;
+    color: black;
+    padding: 1px 6px;
+    align-items: center;
+    text-decoration: none;
+    justify-content: center;
+    background-color: white;
+}
+.form .item-btn a:hover,
+.form .item-btn button:hover{
+    opacity: 0.8;
+}
+.form .item-division{
+    width: 100%;
+    display: flex;
+    font-size: 10px;
+    margin: 5px 0px;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+.form .item-division::before{
+    content: "";
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    background-color: #959595;
+}
+.form .item-division .item-division-text{
+    z-index: 13;
+    color: #898989;
+    padding: 0px 5px;
+    background-color: #ededed;
+}

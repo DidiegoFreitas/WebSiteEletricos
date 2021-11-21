@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Usuário</title>
+    <link href="../css/views/cadastroUsuario.css" rel="stylesheet">
+    <script src="../js/jquery-3.6.0.slim.min.js"></script>
+    <script src="../js/storage.js"></script>
+    <script src="../js/validacoes.js"></script>
+    <script src="../js/util.js"></script>
+    <script src="../js/views/cadastroUsuario.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="cadastro form">
+            <div class="logo-default"> ELETRIC WORLD </div>
+
+            <div class="bloco">
+
+                <div class="bloco-title"> Criar Usuário </div>
+
+                <div class="form">
+                    <div class="item-form">
+                        <div class="form-label">Usuário</div>
+                        <div class="form-input">
+                            <input id="usuario" type="text" placeholder="Usuário">
+                            <div class="form-input-error"></div>
+                        </div>
+                    </div>
+
+                    <div class="item-form">
+                        <div class="form-label">Senha</div>
+                        <div class="form-input">
+                            <input id="password" type="password" placeholder="Senha">
+                            <div class="form-input-error"></div>
+                        </div>
+                    </div>
+
+                    <div class="item-form">
+                        <div class="form-label">Confirmar Senha</div>
+                        <div class="form-input">
+                            <input id="conf_password" type="password" placeholder="Confirmar Senha">
+                            <div class="form-input-error"></div>
+                        </div>
+                    </div>
+
+                    <div class="item-btn">
+                        <button id="btn_criar_usuario" type="button">Criar</button>
+                    </div>
+                </div>
+
+                <div class="bloco-msg"></div>
+
+            </div>
+            <div class="item-division">
+                <div class="item-division-text">Já tem cadastro?</div>
+            </div>
+            <div class="item-btn">
+                <a href="./login.html">Logar</a>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
