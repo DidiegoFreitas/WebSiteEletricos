@@ -1,0 +1,13 @@
+:root{
+    --fa-animation-iteration-count-mod: 1;
+    /* --fa-beat-scale: 1.02; */
+    --fa-beat-scale: 0.98;
+}
+.fa-pulse,
+.fa-flip,
+.fa-beat,
+.fa-fade,
+.fa-flash{
+    -webkit-animation-iteration-count: var(--fa-fa-animation-iteration-count-mod, infinite) !important;
+    animation-iteration-count: var(--fa-animation-iteration-count-mod, infinite) !important;
+}
