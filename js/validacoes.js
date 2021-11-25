@@ -110,3 +110,12 @@ function verificarUserLogin(user, password) {
     }
     return res;
 }
+
+function logout(){
+    let currentUser = getStorageUserByHash(getHashSession());
+    setHashSession('');
+    currentUser.hash = '';
+    updateStorageUserByUser(currentUser.user,currentUser);
+
+    window.location = `.${dicWindows.login}`;
+}
