@@ -16,8 +16,40 @@ $(document).ready(()=>{
             }
         }
     });
+    $('body').on('click', '.btn-voltar', function(){
+        $('.page-body').removeClass('produto');
+    });
 
     $('.btn-list-bloco').on('click', '.card-mini-btn', function (e) {
         $(this).closest('.card-mini-produto').css('display','none');
-    })
+    });
+
+    /* 
+        Salvar as informações de carrinho no sessionStorage
+        criar uma obj para disponibilizar as informações do usuario 
+        sem precisar consultar o storage ou o session e ainda verificar
+        se o usuario esta logado para usar o storage e nao o session
+        caso contrario usar o session
+
+        ex:
+        var obj = {
+            cli:{
+                user:false,
+                password:false,
+                hash:false,
+                car:[]
+            },
+            update: ()=>{
+                let currentCli = obj.cli;
+
+                if(currentCli.hash && currentCli.hash != ''){
+                    //salvar no storage
+                }else{
+                    //salvar no session
+                }
+                return true;
+            }
+        }
+
+    */
 })
