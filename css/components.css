@@ -136,6 +136,11 @@
     margin-top: 5px;
     border-radius: 3px;
 }
+.btn-list-bloco .btn-list-bloco-item.disabled{
+    color: #7c7c7c;
+    cursor: not-allowed;
+    background-color: #ededed;
+}
 .btn-list-bloco .card-mini-produto.bloco,
 .btn-list-bloco .btn-list-bloco-item.bloco{
     margin: 0px;
@@ -202,8 +207,10 @@
     align-items: flex-start;
     border: 1px solid #ededed;
 }
+.list-card.all{
+    margin-bottom: 0px;
+}
 .list-card:hover{
-    /* box-shadow: 0 0 6px 0 #00000024; */
     border-color: #c3c3c3;
 }
 .list-card .list-card-info{
@@ -218,8 +225,9 @@
     flex-wrap: nowrap;
     flex-direction: column;
     align-items: flex-start;
-    background-color: #f5f5f5;
+    background-color: #f5f5f56b;
     border-top: 1px solid #ededed;
+    box-shadow: inset 0 0 80px 20px #e3e3e3;
 }
 .list-card .list-cards{
     padding: 5px;
@@ -266,13 +274,15 @@
 .card-mini-produto .card-mini-img{
     width: 100%;
     height: 50%;
+    display: flex;
     min-height: 100px;
     margin-bottom: 5px;
+    justify-content: center;
     border-bottom: 1px solid #d1d1d1;
 }
 .card-mini-produto .card-mini-img img{
-    width: 100%;
-    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
 }
 .card-mini-produto .card-mini-preco{
     display: flex;
