@@ -1,6 +1,7 @@
 let dicTables = {
     user:'users',
     carrinho:'car',
+    hash:'currentHash',
 };
 let templateCar = {
     idCar: 0,
@@ -133,7 +134,7 @@ function updateStorageUserByUser(user, updateUser) {
         });
     }
     window.localStorage.setItem('users', JSON.stringify(auxStorage));
-    window.sessionStorage.setItem('currentHash', updateUser.hash);
+    setHashSession(updateUser.hash);
     return res;
 }
 
@@ -165,6 +166,10 @@ function getStorageUserByHash(hash) {
     return res;
 }
 
+function setHashSession(currentHash) {
+    window.sessionStorage.setItem(dicTables.hash, currentHash);
+}
+
 function getHashSession() {
-    return window.sessionStorage.getItem('currentHash');
+    return window.sessionStorage.getItem(dicTables.hash);
 }
