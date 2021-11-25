@@ -122,13 +122,33 @@ function createCardMiniProduto(obj) {
                 console.log('click do carrinho');
                 // console.log(getStorageUserByHash(getHashSession()));
                 addItemCarrinho(currentUser.user, obj.id_produto);
-                $(this).closest('.card-mini-produto').css('display','none');
+                // $(this).closest('.card-mini-produto').css('display','none');
             })
         )
     )
     .on('click', function (e) {
-        console.log('click do card', e, e.target);
+        //IGNORANDO CLICK DO BTN DO CARD
+        if($(e.target).closest('.card-mini-btn').length === 0){
+            // console.log('currentObj',obj);
+            $('.page-body').removeClass('produto').addClass('load');
+            //SIMULANDO O TEMPO DE UMA REQUISIÇÃO ASSINCRONA
+            setTimeout(() => {
+                exibirDetalheProduto(obj);
+            }, 500);
+        }
     });
+}
+
+function exibirDetalheProduto(produto) {
+    console.log('createDetalheCardProduto',produto);
+    // $('.page-body').text('');
+    // $('.page-body').append(
+    //     $('<div>',{class:''})
+    // );
+
+    $('.page-body')
+    .removeClass('load')
+    .addClass('produto');
 }
 
 /* 
